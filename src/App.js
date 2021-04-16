@@ -1,16 +1,12 @@
 import React from "react";
 
-const a = 20;
-const b = 20;
-const sum = a + b;
+//  null , numbers , strings, array , HTML,
+//ternary operator , [(condition) ? (if true, do this) : (otherwise, do this)
 
 function App() {
   return (
-    <>
-    <h1> 20 + 20  = {sum} </h1>,
-    <h1>{Math.abs(3/5)}</h1>.
-    <h1>{Math.round(5/3)}</h1>.
-    </>
+   
+  <h1> {1 + 0 > 5 ?<p>if  true this </p>:<p>if false this</p>}</h1>
   );
 }
 
