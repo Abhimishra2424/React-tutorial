@@ -1,16 +1,18 @@
 import React from "react";
 
+const firstName = 'abhishek';
+const lastName = 'Mishra';
+
+const sum = 20
+const sum1 = 10
+
+
 function App() {
   
-  function buttonwasclicked (event)
-  {
-    console.log(event.target);
-    alert('I was clicked')
-  }
   return (
    
    <>
-     <button onClick={buttonwasclicked}> button </button>
+     <h1>{`My name is ${firstName} ${lastName} ${sum + sum1}`}</h1>
    </>
   );
 }
