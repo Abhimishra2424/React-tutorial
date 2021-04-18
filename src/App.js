@@ -1,18 +1,16 @@
 import React from "react";
 
-const firstName = 'abhishek';
-const lastName = 'Mishra';
 
-const sum = 20
-const sum1 = 10
+const dayDate = new Date ;
+const monthDate = new Date ;
+const yearDate = new Date ;
 
 
 function App() {
   
   return (
-   
    <>
-     <h1>{`My name is ${firstName} ${lastName} ${sum + sum1}`}</h1>
+     <h1>{`${dayDate.getDate()} ${monthDate.getMonth()} ${yearDate.getFullYear()} `}</h1>
    </>
   );
 }
