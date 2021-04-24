@@ -17,3 +17,7 @@ function Img() {
 }
 
 export default Img;
+
+
+how to use it 
+<Img />
