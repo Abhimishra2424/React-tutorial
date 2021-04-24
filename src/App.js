@@ -1,16 +1,19 @@
-import React from "react";
-import Img from "./Img";
+import React, { useState } from "react";
 
 
-const links = "https://abhi-web.netlify.app/"
 
 function App() {
+
+  const [counter,  setCounter] = useState(0)// <- [0, function]
+
+  function Clicked (){
+       setCounter(counter + 1);
+    
+  }
   return (
     <>
-    <Img />
-      <h1 contentEditable="true" >abhishek</h1>
-       <br />
-       <a href={links}  target="_abhi">My website</a>
+      <button onClick={Clicked}>button</button>
+      <h1> {counter}</h1>
     </>
   );
 }
