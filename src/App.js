@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import './App.css'
 
-
+const name = 'Abhishek Mishra'
+const img = 'https://picsum.photos/id/1/200/300'
+const img2 = 'https://picsum.photos/id/1/200/300'
 
 function App() {
-
-  const [counter,  setCounter] = useState(0)// <- [0, function]
-
-  function Clicked (){
-       setCounter(counter + 1);
-    
-  }
   return (
     <>
-      <button onClick={Clicked}>button</button>
-      <h1> {counter}</h1>
+      <h1 className="names"> my name is {name} </h1>
+      <div className="main">
+        <img className="img" src={img}/>
+        <img className="img" src={img2}/>
+      </div>
     </>
   );
 }
