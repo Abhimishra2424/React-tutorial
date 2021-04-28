@@ -1,28 +1,36 @@
-import React from "react";
-import "./App.css";
-
-const name = "Abhishek Mishra";
-const img = "https://picsum.photos/id/1/200/300";
-const img2 = "https://picsum.photos/id/1/200/300";
-
-const heading = {
-  color: "blue",
-  marginTop: "70px",
-  textShadow: "0px 2px 4px #00c3ff",
-};
+import React, { useState } from "react";
 
 function App() {
+  const [name, setname] = useState("");
+  const [password, setpassword] = useState("");
+
   return (
-    <>
-      <h1 style={heading} className="names">
-        My Name Is {name}
-      </h1>
-      <div className="main">
-        <img className="img" src={img} />
-        <img className="img" src={img2} />
-      </div>
-    </>
+    <div>
+      <input
+        type="name"
+        value={name}
+        placeholder="Enter Your Name"
+        onChange={updatetextfield}
+      ></input>
+      <input
+        type="password"
+        value={password}
+        placeholder="Enter Your Password"
+        onChange={updatepasswordfield}
+      ></input>
+      <button onClick={submitForm}>submit</button>
+    </div>
   );
+  function submitForm() {
+    console.log(name, password);
+  }
+
+  function updatetextfield(event) {
+    setname(event.target.value);
+  }
+  function updatepasswordfield(event) {
+    setpassword(event.target.value);
+  }
 }
 
 export default App;
