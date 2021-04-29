@@ -1,36 +1,15 @@
-import React, { useState } from "react";
+const myname = "abhishek";
+const favpro = "React js";
 
-function App() {
-  const [name, setname] = useState("");
-  const [password, setpassword] = useState("");
-
-  return (
-    <div>
-      <input
-        type="name"
-        value={name}
-        placeholder="Enter Your Name"
-        onChange={updatetextfield}
-      ></input>
-      <input
-        type="password"
-        value={password}
-        placeholder="Enter Your Password"
-        onChange={updatepasswordfield}
-      ></input>
-      <button onClick={submitForm}>submit</button>
-    </div>
-  );
-  function submitForm() {
-    console.log(name, password);
-  }
-
-  function updatetextfield(event) {
-    setname(event.target.value);
-  }
-  function updatepasswordfield(event) {
-    setpassword(event.target.value);
-  }
+function myLast() {
+  let names = "abhishek mishra";
+  return names;
+}
+function myage() {
+  let age = "20";
+  return age;
 }
 
-export default App;
+export default myname;
+
+export { favpro, myLast , myage};
