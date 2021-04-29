@@ -1,15 +1,20 @@
-const myname = "abhishek";
-const favpro = "React js";
-
-function myLast() {
-  let names = "abhishek mishra";
-  return names;
+function add (a ,b){
+    let sum = a + b
+    return sum
 }
-function myage() {
-  let age = "20";
-  return age;
+function sub (a ,b){
+    let sum = a - b
+    return sum
+}
+function mul (a ,b){
+    let sum = a * b
+    return sum
+}
+function div (a ,b){
+    let sum = a / b
+     sum.toFixed(2)
+    return sum
 }
 
-export default myname;
-
-export { favpro, myLast , myage};
+export default add;
+export {sub , mul ,  div}
