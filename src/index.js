@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import add, { sub, mul, div } from "./App";
+import App from "./App";
 
 ReactDOM.render(
   <>
-    <h1>add two number {add(23, 65)}</h1>
-    <h1>sub two number {sub(23, 20)}</h1>
-    <h1>mul two number {mul(23, 20)}</h1>
-    <h1>div two number {div(2, 20)}</h1>
+    <App />
   </>,
   document.getElementById("root")
 );

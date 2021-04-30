@@ -1,20 +1,12 @@
-function add (a ,b){
-    let sum = a + b
-    return sum
-}
-function sub (a ,b){
-    let sum = a - b
-    return sum
-}
-function mul (a ,b){
-    let sum = a * b
-    return sum
-}
-function div (a ,b){
-    let sum = a / b
-     sum.toFixed(2)
-    return sum
+import React from "react";
+
+function Name(props) {
+  console.log(props);
+  return <h1>hello , {props.name}</h1>;
 }
 
-export default add;
-export {sub , mul ,  div}
+function App() {
+  return <Name name="Abhishek" />;
+}
+
+export default App;
