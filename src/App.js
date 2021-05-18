@@ -1,25 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 function App() {
-  const myprolang = ["js", "php", "python"];
 
-  // javascript
-  // let top1 = myprolang[0]
-  // let top2 = myprolang[1]
-  // let top3 = myprolang[2]
+  const [name , setName] = useState('')
+  const [password , setPassword] = useState('')
 
-  // Array Destructuring Es6
-  let [top1, top2, top3] = myprolang;
-  console.log(myprolang);
+  const UpdateName =(e)=>{
+    setName(e.target.value)
+  }
+  const UpdatePassword =(e)=>{
+    setPassword(e.target.value)
+  }
+
+  const submit =()=>{
+    console.log(name , password);
+  }
 
   return (
     <>
-      <h1>{`my fav prog lang is  ${top1}`}</h1>
-      <h1>{`my fav prog lang is  ${top2}`}</h1>
-      <h1>{`my fav prog lang is  ${top3}`}</h1>
-         {/* {myprolang.map((val , index)=>{
-              return `   ${val}`
-         })} */}
+     <label>Enter your name:
+     <input type="name"  value={name} onChange={UpdateName}  />
+     </label>
+     <br />
+     <label>Enter your password:
+     <input type="password"  value={password} onChange={UpdatePassword} />
+     </label>
+
+     <button onClick={submit}> submit</button>
     </>
   );
 }
