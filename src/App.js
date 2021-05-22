@@ -1,32 +1,29 @@
 import React, { useState } from "react";
 
 function App() {
+  const purple = "#8e44ad";
+  const [bgcolor, setBgcolor] = useState(purple);
+  const [name, setName] = useState("click me");
 
-  const [name , setName] = useState('')
-  const [password , setPassword] = useState('')
+  const bgchange = () => {
+    let newBg = "#34495e";
+    let newName = "yo yo";
+    setBgcolor(newBg);
+    setName(newName);
+  };
 
-  const UpdateName =(e)=>{
-    setName(e.target.value)
-  }
-  const UpdatePassword =(e)=>{
-    setPassword(e.target.value)
-  }
-
-  const submit =()=>{
-    console.log(name , password);
-  }
+  const BgBack = () => {
+    setBgcolor(purple);
+    setName("ayyo !!");
+  };
 
   return (
     <>
-     <label>Enter your name:
-     <input type="name"  value={name} onChange={UpdateName}  />
-     </label>
-     <br />
-     <label>Enter your password:
-     <input type="password"  value={password} onChange={UpdatePassword} />
-     </label>
-
-     <button onClick={submit}> submit</button>
+      <div style={{ backgroundColor: bgcolor }}>
+        <button onClick={bgchange} onDoubleClick={BgBack}>
+          {name}
+        </button>
+      </div>
     </>
   );
 }
