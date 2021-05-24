@@ -1,29 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import axios from "axios";
 
 function App() {
-  const purple = "#8e44ad";
-  const [bgcolor, setBgcolor] = useState(purple);
-  const [name, setName] = useState("click me");
-
-  const bgchange = () => {
-    let newBg = "#34495e";
-    let newName = "yo yo";
-    setBgcolor(newBg);
-    setName(newName);
+  const fetchRandomData = () => {
+    return axios
+      .get("https://randomuser.me/api")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-
-  const BgBack = () => {
-    setBgcolor(purple);
-    setName("ayyo !!");
-  };
-
   return (
     <>
-      <div style={{ backgroundColor: bgcolor }}>
-        <button onClick={bgchange} onDoubleClick={BgBack}>
-          {name}
-        </button>
-      </div>
+      <button onClick={fetchRandomData}>random data</button>
     </>
   );
 }
