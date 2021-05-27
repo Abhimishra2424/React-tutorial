@@ -1,21 +1,16 @@
 import React from "react";
-import axios from "axios";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home/index";
+import About from "./components/About/index";
 
 function App() {
-  const fetchRandomData = () => {
-    return axios
-      .get("https://randomuser.me/api")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
   return (
-    <>
-      <button onClick={fetchRandomData}>random data</button>
-    </>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+      </Switch>
+    </Router>
   );
 }
 
